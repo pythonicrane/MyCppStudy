@@ -53,7 +53,8 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "xstring": "cpp"
     } // 效果稍好，但太卡，故关掉
 }
 

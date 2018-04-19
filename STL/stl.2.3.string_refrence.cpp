@@ -1,3 +1,12 @@
+/**------------------------------------------
+* @Author: Zhao Heln
+* @Time: 2018年4月19日11:02:41
+* @Software: Visual Studio Code
+* @Project: C++ STL标准程序库开发指南
+* @Problem: string和引用、指针的处理
+* @Description：----------------------------*
+*
+------------------------------------------**/
 #include <iostream>
 #include <string>
 using namespace std;
