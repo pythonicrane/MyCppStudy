@@ -54,7 +54,9 @@
         "typeinfo": "cpp",
         "utility": "cpp",
         "string": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "array": "cpp"
     } // 效果稍好，但太卡，故关掉
 }
 
