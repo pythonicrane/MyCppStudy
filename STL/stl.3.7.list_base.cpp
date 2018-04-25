@@ -5,7 +5,7 @@
 * @Project      : C++ STL标准程序库开发指南
 * @Problem      : List的基本操作
 * @Description  :
-* 初始化，
+*
 -------------------------------------------------------------**/
 #include <algorithm>
 #include <functional>
@@ -61,7 +61,7 @@ int main()
     }
 
     /*List 元素存取*/
-    //List不存在下标操作[]和.at()函数访问，只能使用迭代器
+    //List不支持随机存取，不存在下标操作[]和.at()函数访问，只能使用迭代器;
 
     /*List 元素重置*/
     //assign();
