@@ -142,6 +142,7 @@ int main()
     //void merge(list& x,greater<T> pr);
     //void sort();
     //void sort(greater<T> pr);
+    //********List 没有find()函数********
     list<int> L1, L2, L3;
     L1.push_back(1);
     L1.push_back(5);
