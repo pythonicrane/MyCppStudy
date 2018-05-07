@@ -1,13 +1,17 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
 using namespace std;
 
 
 int main()
 {
-    long Aa = 11;
-    long *B_Pointer = NULL;
-    B_Pointer = &Aa;
-    cout << B_Pointer << endl;
-    cin.get();
-    //system("PAUSE");
+    vector<int> vt(10, 1);
+    if(vt.size()>1)
+    {
+        sort(++vt.begin(), vt.end());
+    }
+    copy(vt.begin(), vt.end(), ostream_iterator<int>(cout,","));
+    system("PAUSE");
 }

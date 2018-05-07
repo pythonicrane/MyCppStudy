@@ -10,6 +10,7 @@
 #include <iostream>
 using namespace std;
 
+//冒泡排序
 void BubbleSort(int arr[],int lenght)
 {
     int tmp;
@@ -28,6 +29,7 @@ void BubbleSort(int arr[],int lenght)
     }
 }
 
+//插入排序
 void InsertSort(int arr[],int lenght)
 {
     int tmp;
@@ -43,15 +45,16 @@ void InsertSort(int arr[],int lenght)
     }
 }
 
+//希尔排序
 void ShellSort(int arr[],int lenght)
 {
     if(lenght==0||arr ==NULL)
     {
         return;
     }
-    for (int gap = lenght / 2; gap > 0;gap /= 2 )
+    for (int gap = lenght / 2; gap > 0;gap /= 2 )//多一层循环，表示间隔分组
     {
-        for (int i = gap; i < lenght;++i)
+        for (int i = gap; i < lenght;++i)//类似于插入排序
         {
             int inserted = arr[i];
             int j;
@@ -64,11 +67,33 @@ void ShellSort(int arr[],int lenght)
     }
 }
 
+//快速排序
+void QuietSort(int arr[],int left,int right)
+{
+    if(left>=right)//********注意=号********
+        return;
+    int i = left;
+    int j = right;
+    int key = arr[i];//与partition算法思路一样，把小于Key的值放左边，把大于Key的值放右边；
+    while (i<j)
+    {
+        while(i<j&&key<=arr[j])//注意有两个条件，先得到小于的值
+            --j;
+        arr[i] = arr[j];//得到的第一个小于Key值，存到前面去
+        while(i<j&&key>=arr[i])
+            --i;
+        arr[j] = arr[i];//得到的第一个大于Key值，存到后面去
+    }
+    arr[i] = key;//把Key放到中间
+    QuietSort(arr, left, i - 1);//左边子序列递归快排
+    QuietSort(arr, i + 1, right);;//右边子序列递归快排
+}
+
 
 int main()
 {
     int arr[10] = {1,3,2,4,10,8,9,5,7,6};
-    ShellSort(arr, 10);
+    QuietSort(arr, 0,9);
 
     for (int i = 0; i < 10;++i)
     {
