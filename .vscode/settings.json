@@ -58,7 +58,14 @@
         "algorithm": "cpp",
         "array": "cpp",
         "vector": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "fstream": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "functional": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "tuple": "cpp"
     } // 效果稍好，但太卡，故关掉
 }
 
